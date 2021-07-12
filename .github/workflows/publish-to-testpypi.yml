@@ -14,7 +14,7 @@ jobs:
     - name: Append build number to version
       uses: ./.github/actions/append-buildnum
       with:
-        package: nygame
+        package: sizeroyale
 
     - name: Set up Python 3.8
       uses: actions/setup-python@v1
