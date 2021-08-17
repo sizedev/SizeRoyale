@@ -9,7 +9,7 @@ class CustomError(Exception):
             self.message = None
 
     def __str__(self):
-        return f"{self.__name__}: {self.message}"
+        return f"{self.__class__.__name__}: {self.message}"
 
 
 class ParseError(CustomError):
