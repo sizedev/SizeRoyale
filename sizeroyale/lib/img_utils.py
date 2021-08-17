@@ -24,7 +24,7 @@ async def download_image(url):
         c = Image.open(b)
         return c
     else:
-        raise DownloadError(f"Image could not be downloaded: {url!r}.")
+        raise DownloadError(f"Image could not be downloaded: {url!r} (Error code {r.status}).")
 
 
 # https://note.nkmk.me/en/python-pillow-square-circle-thumbnail/
