@@ -17,7 +17,10 @@ discord_gray = (0x36, 0x39, 0x3F, 255)
 
 @lru_cache(50)
 async def download_image(url):
-    r = await requests.get(url, headers={"Connection": "Upgrade", "Upgrade": "http/1.1"})
+    r = await requests.get(url)
+    if r.status != 200:
+        r = await requests.get(url, headers={"Connection": "Upgrade", "Upgrade": "http/1.1"})
+
     if r.status == 200:
         a = await r.read()
         b = io.BytesIO(a)
