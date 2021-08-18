@@ -83,7 +83,7 @@ class RoyaleCog(commands.Cog):
             m = await ctx.send("Creating royale...")
 
             if not ctx.message.attachments and seed != "test":
-                await m.edit(content = "You didn't upload a royale sheet. Please see https://github.com/DigiDuncan/SizeRoyale/blob/master/royale-spec.txt")
+                await m.edit(content = "You didn't upload a royale sheet. Please see <https://github.com/DigiDuncan/SizeRoyale/blob/master/royale-spec.txt>")
                 return
 
             if not ctx.message.attachments and seed == "test":
@@ -94,7 +94,7 @@ class RoyaleCog(commands.Cog):
                 sheet = ctx.message.attachments[0]
                 filename = sheet.filename
                 if not sheet.filename.endswith(".txt"):
-                    await m.edit(content = f"{sheet.filename} is not a `txt` file.")
+                    await m.edit(content = f"{sheet.filename} is not a `.txt` file.")
                     return
                 data = (await sheet.read()).decode("utf-8")
 
