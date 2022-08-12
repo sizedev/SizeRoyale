@@ -5,7 +5,7 @@ from sizeroyale.lib.runnableevent import RunnableEvent
 from typing import List
 from sizeroyale.lib.embedtemplate import EmbedTemplate
 
-import petname
+from sizeroyale.lib import petname
 
 from sizebot.lib.loglevels import ROYALE
 from sizeroyale.lib.classes.royale import Royale
